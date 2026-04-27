@@ -1,0 +1,17 @@
+# 1. Create the Machine
+mach create "stm32f4-thermal-monitor"
+
+# 2. Load the Hardware Description (REPL)
+machine LoadPlatformDescription @simulation/board_config.repl
+
+# 3. Load your Compiled Software (Binary)
+sysbus LoadBinary @firmware/firmware.bin 0x08000000
+
+# 4. Set the CPU PC (Program Counter)
+cpu PC 0x08000000
+
+# 5. THE FIX: Look inside the 'sysbus' folder for 'uart2'
+showAnalyzer sysbus.usart2
+
+# 6. Start the simulation
+start

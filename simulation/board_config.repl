@@ -2,7 +2,7 @@
 using "platforms/cpus/stm32f4.repl"
 
 // Define a virtual LED on Port D, Pin 12 (standard for this board)
-led: Visual.LED @ gpioPortD 12
+led: Miscellaneous.LED @ gpioPortD 12
 
 // If you want to simulate a temperature sensor later, 
 // you would define it here on the I2C or SPI bus.

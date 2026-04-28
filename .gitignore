@@ -1,0 +1,13 @@
+# Build outputs
+*.o
+*.elf
+*.bin
+*.map
+
+# Build folders
+build/
+out/
+
+# Temporary files
+*.log
+*.tmp
